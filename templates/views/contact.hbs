@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JustDance-Contact</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+    {{!-- Navbar --}}
+    {{>navbar}}
+
+
+
+    <!-- Contact Form -->
+
+
+    <div class="container my-4" data-aos="zoom-in-up">
+        <h2 class="my-4" style="text-decoration: underline;">Contact Us</h2>
+        <form class="row g-3" action="/contact" onsubmit="validation()" method="POST" >
+            <div class="col-md-6">
+                <label class="form-label">First Name</label>
+                <input type="text" class="form-control" id="firstname" autocomplete="off" name="firstname">
+                <span id="firsterror" class="text-danger"></span>
+            </div>
+            <div class="col-md-6">
+                <label class="form-label">Last Name</label>
+                <input type="text" class="form-control" id="lastname" autocomplete="off" name="lastname">
+                <span id="lasterror" class="text-danger"></span>
+            </div>
+
+            <div class="col-md-6">
+                <label for="inputEmail4" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="abc@gmail.com" autocomplete="off" name="email">
+                <span id="emailerror" class="text-danger"></span>
+            </div>
+            <div class="col-md-6">
+                <label for="inputPassword4" class="form-label">Mobile no.</label>
+                <input type="number" class="form-control" id="mobile" autocomplete="off" name="mobile">
+                <span id="moberror" class="text-danger"></span>
+            </div>
+            <div class="col-12">
+                <label for="inputAddress" class="form-label">Address</label>
+                <input type="text" class="form-control" id="address" placeholder="1234 Main St" autocomplete="off" name="address">
+                <span id="adderror" class="text-danger"></span>
+            </div>
+
+            <div class="col-md-4">
+                <label for="inputCity" class="form-label">City</label>
+                <input type="text" class="form-control" id="city" autocomplete="off" name="city">
+                <span id="cityerror" class="text-danger"></span>
+            </div>
+            <div class="col-md-4">
+                <label for="inputState" class="form-label">State</label>
+                <select value="" id="inputState" class="form-select" name="state">
+                    <option value="" selected>Choose</option>
+                    <option>Maharashtra</option>
+                    <option>Gujrat</option>
+                    <option>Punjab</option>
+                    <option>Haryana</option>
+                    <option>Rajasthan</option>
+                </select>
+                <span id="stateError" class="text-danger"></span>
+            </div>
+            <div class="col-md-2">
+                <label for="inputZip" class="form-label">Pincode</label>
+                <input type="text" class="form-control" id="pincode" autocomplete="off" name="pincode">
+                <span id="pinerror" class="text-danger"></span>
+            </div>
+            <div class="col-12">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="checkbox" name="checkbox">
+                    <label class="form-check-label" for="gridCheck">
+                        Are you already a member of Just Dance?
+                    </label><span id="checkerror" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="col-12">
+                <button on type="submit" onclick="submitted()" class="btn btn-primary" value="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+
+
+    {{!-- Footer --}}
+    {{>footer}}
+
+
+    {{!-- Scripts --}}
+    {{>scripts}}
+
+
+</body>
+
+</html>

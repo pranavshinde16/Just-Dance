@@ -17,7 +17,15 @@ html{
     margin-left: 50px;
 }   
 
-.navbar{
+#yz li a:hover{
+    color:cyan;
+}
+#uz li a:hover{
+    color:rgb(0, 0, 0);
+    background-color: white;
+}
+
+li.navbar{
     padding-top: 0.2rem;
     padding-bottom: 0.2rem;
 }
